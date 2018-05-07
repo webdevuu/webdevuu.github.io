@@ -595,7 +595,7 @@ footer {
       margin: 0 0 0 70px; } }
 
 @media (max-width: 991px) {
-  body.overflow-hidden {
+  html, body.overflow-hidden {
     display: block;
     overflow: hidden; }
   header .container .header-nav {
