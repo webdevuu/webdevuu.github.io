@@ -15,7 +15,7 @@ $(function () {
     }).on('click', '.hamburger', function() {
         $(this).toggleClass('active');
         $('header .header-nav nav').toggleClass('showed');
-        $('body').toggleClass('overflow-hidden');
+        $('body, html').toggleClass('overflow-hidden');
     });;
 
 
