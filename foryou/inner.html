@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/libs.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main-inner">
+      <div class="fixed-vertical">
+        <div class="hamburger"><span></span><span></span><span></span></div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">О ForYou</a></li>
+            <li><a href="#">3D тур по ресторану</a></li>
+            <li><a href="#">Подарочные сертификаты</a></li>
+            <li><a href="#">Билеты на ужины</a></li>
+            <li><a href="#">Меню и доставка</a></li>
+            <li><a href="#">Резерв столов</a></li>
+            <li><a href="#">Карьера</a></li>
+            <li><a href="#">Караоке</a></li>
+            <li><a href="#">Кейтеринг</a></li>
+            <li><a href="#">Консалтинг</a></li>
+            <li><a href="#">Фестиваль «Держи краба!»</a></li>
+            <li><a href="#">Фестиваль «На гребне!»</a></li>
+          </ul>
+        </nav>
+        <div class="logo-vertical"></div>
+      </div>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-lg-8 col-xl-7 offset-xl-1">
+              <div class="content">
+                <h1> О ресторане</h1><img src="img/tmp/about.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem  ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p><a class="btns btns-white btns-icon btns-icon__video" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox>Посмотреть видео</a>
+              </div>
+            </div>
+            <div class="col-md-5 col-lg-4 col-xl-3 offset-xl-1">
+              <div class="sticky-wrapper">
+                <button class="btns" data-toggle="modal" data-target="#reserve">Забронировать стол</button>
+                <div class="info-wrapp">
+                  <div class="title">Адрес</div>
+                  <p>г. Улан-Удэ, ул. Ленина, 52</p><a href="#">Как добраться</a>
+                </div>
+                <div class="info-wrapp">
+                  <div class="title">Время работы</div>
+                  <p>Ежедневно, 11:00–01:00</p>
+                </div>
+                <div class="info-wrapp">
+                  <div class="title">Контакты</div>
+                  <p>+7 (3012) 379‒000</p>
+                </div>
+                <ul class="socials">
+                  <li><a class="vk" href="#"></a></li>
+                  <li><a class="instagram" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-sm-6 col-xl-5 offset-xl-1 text-center text-md-left">2019 ©</div>
+            <div class="col-sm-6 col-xl-6 text-center text-md-right">
+               Фо You
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="modal fade" id="reserve" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Забронировать стол</h3>
+              <button class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="nameInput">Ваше имя</label>
+                  <input class="form-control" type="text" placeholder="Иван Сергеевич" id="nameInput">
+                </div>
+                <div class="form-group">
+                  <label for="emailInput">Ваш E-mail</label>
+                  <input class="form-control" type="email" placeholder="name@example.com" id="emailInput">
+                </div>
+                <div class="form-group">
+                  <label for="phoneInput">Телефон</label>
+                  <input class="form-control" type="text" placeholder="+7 (999) 999 99 99" id="phoneInput">
+                </div>
+                <div class="form-group">
+                  <button class="btns">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

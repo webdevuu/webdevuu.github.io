@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/libs.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main-index">
+      <video class="video-bg" playsinline autoplay loop muted>
+        <source src="img/cvideobg.webm" type="video/webm">
+        <source src="img/cvideobg.mp4" type="video/mp4">
+      </video>
+      <div class="logo"></div>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">О ForYou</a></li>
+          <li><a href="#">3D тур по ресторану</a></li>
+          <li><a href="#">Подарочные сертификаты</a></li>
+          <li><a href="#">Билеты на ужины</a></li>
+          <li><a href="#">Меню и доставка</a></li>
+          <li><a href="#">Резерв столов</a></li>
+          <li><a href="#">Карьера</a></li>
+          <li><a href="#">Караоке</a></li>
+          <li><a href="#">Кейтеринг</a></li>
+          <li><a href="#">Консалтинг</a></li>
+          <li><a href="#">Фестиваль «Держи краба!»</a></li>
+          <li><a href="#">Фестиваль «На гребне!»</a></li>
+        </ul>
+      </nav>
+      <address>
+        <p>&copy; ФоYou Паназиатский ресторан</p>
+        <p>ул. Ленина 52</p>
+        <p>379-000</p>
+      </address>
+      <ul class="socials">
+        <li><a class="vk" href="#"></a></li>
+        <li><a class="instagram" href="#"></a></li>
+      </ul>
+      <button class="btns" data-toggle="modal" data-target="#reserve">Забронировать стол</button>
+    </div>
+    <div class="modal fade" id="reserve" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Забронировать стол</h3>
+            <button class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="nameInput">Ваше имя</label>
+                <input class="form-control" type="text" placeholder="Иван Сергеевич" id="nameInput">
+              </div>
+              <div class="form-group">
+                <label for="emailInput">Ваш E-mail</label>
+                <input class="form-control" type="email" placeholder="name@example.com" id="emailInput">
+              </div>
+              <div class="form-group">
+                <label for="phoneInput">Телефон</label>
+                <input class="form-control" type="text" placeholder="+7 (999) 999 99 99" id="phoneInput">
+              </div>
+              <div class="form-group">
+                <button class="btns">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
