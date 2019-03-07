@@ -26,7 +26,7 @@ gulp.task('pug', function() {
 });
 
 gulp.task('sass', function() {
-	return gulp.src('src/sass/**/*.scss')
+	return gulp.src('src/sass/**/*.sass')
 		.pipe( sass().on('error', notify.onError(
 			{
 				message: "<%= error.message %>",
@@ -38,31 +38,6 @@ gulp.task('sass', function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('scripts', function() {
-	return gulp.src([
-		'src/libs/jquery/dist/jquery.min.js',
-        'src/libs/bootstrap/dist/js/bootstrap.min.js',
-		'src/libs/fancybox/dist/jquery.fancybox.js',
-		'src/libs/slick-carousel/slick/slick.min.js',
-		'src/libs/sticky-kit/jquery.sticky-kit.js'
-	])
-	.pipe(concat('libs.min.js'))
-	.pipe(uglify())
-	.pipe(gulp.dest('src/js'));
-});
-
-gulp.task('css-libs', ['sass'], function () {
-	return gulp.src([
-		'src/libs/bootstrap/dist/css/bootstrap.css',
-        'src/libs/font-awesome/css/font-awesome.css',
-		'src/libs/fancybox/dist/jquery.fancybox.css',
-		'src/libs/slick-carousel/slick/slick.css'
-	])
-	.pipe(concat('libs.css'))
-	.pipe(cssnano())
-	.pipe(rename({suffix: '.min'}))
-	.pipe(gulp.dest('src/css'));
-});
 
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -91,16 +66,15 @@ gulp.task('img', function () {
 		.pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('watch', ['browser-sync', 'css-libs', 'scripts', 'pug'], function() {
-    gulp.watch('src/sass/**/*.scss', ['sass']);
+gulp.task('watch', ['browser-sync', 'pug'], function() {
+    gulp.watch('src/sass/**/*.sass', ['sass']);
     gulp.watch('src/pug/**/*.pug', ['pug']);
 	gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
-gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function () {
+gulp.task('build', ['clean', 'img', 'sass'], function () {
 	var buildCss = gulp.src([
-			'src/css/styles.css',
-			'src/css/libs.min.css',
+			'src/css/styles.css'
 		])
 		.pipe(gulp.dest('dist/css'));
 
