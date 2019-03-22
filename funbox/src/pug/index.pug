@@ -1,0 +1,67 @@
+doctype html
+html(lang="ru")
+    include layout/_head
+    body
+        #main
+            h1 Ты сегодня покормил кота?
+            .container
+                .cats-food-item
+                    .card
+                        .subtitle Сказочное заморское яство
+                        .subtitle-selected-hover Котэ не одобряет?
+                        .title Нямушка
+                        .taste с фуа-гра
+                        .portions
+                            span.count 10
+                            | порций
+                        .present мышь в подарок
+                        .weight
+                            .count 0,5
+                            .measure кг
+                        img(src="img/cat.png" srcset="img/cat@2x.png 2x" alt="Нямушка").image
+                    .status
+                        .status-default Чего сидишь? Порадуй котэ, <a href="#" class="select-card">купи</a>.
+                        .status-selected Печень утки разварная с артишоками.
+                        .status-disabled Печалька, с фуа-гра закончился.
+                .cats-food-item.selected.selected-hover
+                    .card
+                        .subtitle Сказочное заморское яство
+                        .subtitle-selected-hover Котэ не одобряет?
+                        .title Нямушка
+                        .taste с рыбой
+                        .portions
+                            span.count 40
+                            | порций
+                        .present
+                            span.count 2
+                            | мыши в подарок
+                        .weight
+                            .count 2
+                            .measure кг
+                        img(src="img/cat.png" srcset="img/cat@2x.png 2x" alt="Нямушка").image
+                    .status
+                        .status-default Чего сидишь? Порадуй котэ, <a href="#" class="select-card">купи</a>.
+                        .status-selected Головы щучьи с чесноком да свежайшая сёмгушка.
+                        .status-disabled Печалька, с рыбой закончился.
+                .cats-food-item.disabled
+                    .card
+                        .subtitle Сказочное заморское яство
+                        .subtitle-selected-hover Котэ не одобряет?
+                        .title Нямушка
+                        .taste с курой
+                        .portions
+                            span.count 100
+                            | порций
+                        .present
+                            span.count 5
+                            | мышей в подарок
+                        .more заказчик доволен
+                        .weight
+                            .count 5
+                            .measure кг
+                        img(src="img/cat.png" srcset="img/cat@2x.png 2x" alt="Нямушка").image
+                    .status
+                        .status-default Чего сидишь? Порадуй котэ, <a href="#" class="select-card">купи</a>.
+                        .status-selected Филе из цыплят с трюфелями в бульоне.
+                        .status-disabled Печалька, с курой закончился.
+        script(src="js/common.js")
