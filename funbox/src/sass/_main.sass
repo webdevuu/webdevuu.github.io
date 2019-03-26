@@ -36,35 +36,66 @@ h1
   max-width: 1120px
   margin: 0 auto
 .cats-food-item
+  position: relative
   width: 320px
   .card
     position: relative
-    height: 480px
-    border-radius: 0 10px 10px 10px
+    height: 435px
+    border-radius: 0 0 10px 10px
     background: #f2f2f2
-    clip-path: polygon(44px 0, 100% 0, 100% 100%, 0 100%, 0 44px)
+    //clip-path: polygon(44px 0, 100% 0, 100% 100%, 0 100%, 0 44px)
     border: 4px solid $colorDefault
+    border-top: 0
     padding: 16px 22px 0 45px
     cursor: pointer
-    overflow: hidden
+    margin-top: 45px
     &:before
       content: ""
       position: absolute
-      top: 17px
-      left: -11px
-      width: 60px
+      top: -45px
+      left: -4px
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 0 0 46px 46px
+      border-color: transparent transparent #f2f2f2 transparent
+    &:after
+      content: ""
+      position: absolute
+      right: -4px
+      top: -45px
+      border: 4px solid $colorDefault
+      border-left: 0
+      border-bottom: 0
+      width: 275px
+      height: 46px
+      border-radius: 0 10px 0 0
+      background: #f2f2f2
+      z-index: 1
+    .angle-line
+      position: absolute
+      top: -23px
+      left: -12px
+      width: 63.640px
       height: 4px
       background: $colorDefault
       transform: rotate(-45deg)
+      z-index: 3
     .subtitle
+      position: relative
       font-size: 16px
       color: #666
       margin-bottom: 3px
+      margin-top: -29px
+      z-index: 10
     .subtitle-selected-hover
+      position: relative
       display: none
       font-size: 16px
       color: $colorSelectedHover
       margin-bottom: 3px
+      margin-top: -29px
+      z-index: 10
     .title
       font-size: 48px
       font-weight: 700
@@ -87,6 +118,7 @@ h1
       left: 0
       width: 260px
       height: 260px
+      border-radius: 0 0 0 10px
       z-index: 1
     .weight
       position: absolute
@@ -107,8 +139,10 @@ h1
         line-height: 16px
     &:hover
       border-color: $colorDefaultHover
-      &:before
+      .angle-line
         background: $colorDefaultHover
+      &:after
+        border-color: $colorDefaultHover
       .weight
         background: $colorDefaultHover
   .status
@@ -135,8 +169,10 @@ h1
   &.selected
     .card
       border-color: $colorSelected
-      &:before
+      .angle-line
         background: $colorSelected
+      &:after
+        border-color: $colorSelected
       .weight
         background: $colorSelected
     .status
@@ -148,8 +184,10 @@ h1
       .card
         &:hover
           border-color: $colorSelectedHover
-          &:before
+          .angle-line
             background: $colorSelectedHover
+          &:after
+            border-color: $colorSelectedHover
           .subtitle
             display: none
           .subtitle-selected-hover
@@ -160,8 +198,10 @@ h1
     .card
       cursor: default
       border-color: $colorDisabled
-      &:before
+      .angle-line
         background: $colorDisabled
+      &:after
+        border-color: $colorDisabled
       .subtitle, .title, .taste, .portions,  .present, .more
         color: $colorDisabled
       .image

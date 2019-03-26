@@ -75,39 +75,69 @@ h1 {
   margin: 0 auto; }
 
 .cats-food-item {
+  position: relative;
   width: 320px; }
   .cats-food-item .card {
     position: relative;
-    height: 480px;
-    -webkit-border-radius: 0 10px 10px 10px;
-            border-radius: 0 10px 10px 10px;
+    height: 435px;
+    -webkit-border-radius: 0 0 10px 10px;
+            border-radius: 0 0 10px 10px;
     background: #f2f2f2;
-    -webkit-clip-path: polygon(44px 0, 100% 0, 100% 100%, 0 100%, 0 44px);
-            clip-path: polygon(44px 0, 100% 0, 100% 100%, 0 100%, 0 44px);
     border: 4px solid #1698d9;
+    border-top: 0;
     padding: 16px 22px 0 45px;
     cursor: pointer;
-    overflow: hidden; }
+    margin-top: 45px; }
     .cats-food-item .card:before {
       content: "";
       position: absolute;
-      top: 17px;
-      left: -11px;
-      width: 60px;
+      top: -45px;
+      left: -4px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 46px 46px;
+      border-color: transparent transparent #f2f2f2 transparent; }
+    .cats-food-item .card:after {
+      content: "";
+      position: absolute;
+      right: -4px;
+      top: -45px;
+      border: 4px solid #1698d9;
+      border-left: 0;
+      border-bottom: 0;
+      width: 275px;
+      height: 46px;
+      -webkit-border-radius: 0 10px 0 0;
+              border-radius: 0 10px 0 0;
+      background: #f2f2f2;
+      z-index: 1; }
+    .cats-food-item .card .angle-line {
+      position: absolute;
+      top: -23px;
+      left: -12px;
+      width: 63.640px;
       height: 4px;
       background: #1698d9;
       -webkit-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
-              transform: rotate(-45deg); }
+              transform: rotate(-45deg);
+      z-index: 3; }
     .cats-food-item .card .subtitle {
+      position: relative;
       font-size: 16px;
       color: #666;
-      margin-bottom: 3px; }
+      margin-bottom: 3px;
+      margin-top: -29px;
+      z-index: 10; }
     .cats-food-item .card .subtitle-selected-hover {
+      position: relative;
       display: none;
       font-size: 16px;
       color: #e62e7a;
-      margin-bottom: 3px; }
+      margin-bottom: 3px;
+      margin-top: -29px;
+      z-index: 10; }
     .cats-food-item .card .title {
       font-size: 48px;
       font-weight: 700; }
@@ -130,6 +160,8 @@ h1 {
       left: 0;
       width: 260px;
       height: 260px;
+      -webkit-border-radius: 0 0 0 10px;
+              border-radius: 0 0 0 10px;
       z-index: 1; }
     .cats-food-item .card .weight {
       position: absolute;
@@ -151,8 +183,10 @@ h1 {
         line-height: 16px; }
     .cats-food-item .card:hover {
       border-color: #2ea8e6; }
-      .cats-food-item .card:hover:before {
+      .cats-food-item .card:hover .angle-line {
         background: #2ea8e6; }
+      .cats-food-item .card:hover:after {
+        border-color: #2ea8e6; }
       .cats-food-item .card:hover .weight {
         background: #2ea8e6; }
   .cats-food-item .status {
@@ -177,8 +211,10 @@ h1 {
         border-bottom: 0; }
   .cats-food-item.selected .card {
     border-color: #d91667; }
-    .cats-food-item.selected .card:before {
+    .cats-food-item.selected .card .angle-line {
       background: #d91667; }
+    .cats-food-item.selected .card:after {
+      border-color: #d91667; }
     .cats-food-item.selected .card .weight {
       background: #d91667; }
   .cats-food-item.selected .status > div {
@@ -187,8 +223,10 @@ h1 {
     display: inline; }
   .cats-food-item.selected.selected-hover .card:hover {
     border-color: #e62e7a; }
-    .cats-food-item.selected.selected-hover .card:hover:before {
+    .cats-food-item.selected.selected-hover .card:hover .angle-line {
       background: #e62e7a; }
+    .cats-food-item.selected.selected-hover .card:hover:after {
+      border-color: #e62e7a; }
     .cats-food-item.selected.selected-hover .card:hover .subtitle {
       display: none; }
     .cats-food-item.selected.selected-hover .card:hover .subtitle-selected-hover {
@@ -198,8 +236,10 @@ h1 {
   .cats-food-item.disabled .card {
     cursor: default;
     border-color: #b3b3b3; }
-    .cats-food-item.disabled .card:before {
+    .cats-food-item.disabled .card .angle-line {
       background: #b3b3b3; }
+    .cats-food-item.disabled .card:after {
+      border-color: #b3b3b3; }
     .cats-food-item.disabled .card .subtitle, .cats-food-item.disabled .card .title, .cats-food-item.disabled .card .taste, .cats-food-item.disabled .card .portions, .cats-food-item.disabled .card .present, .cats-food-item.disabled .card .more {
       color: #b3b3b3; }
     .cats-food-item.disabled .card .image {
